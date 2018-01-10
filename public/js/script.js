@@ -40,7 +40,7 @@ app.controller('formController', function($scope, $http) {
              }
            }
            
-           $http(req).then(function(){console.log("success")}, function(){console.log("no")});
+           $http(req).then(function(){$("#createMsg").text("Successfully Saved");}, function(){$("#createMsg").text("Error");});
             
     };    
 });
@@ -76,14 +76,7 @@ app.controller('tableController', function($scope, $http, sharedvalues) {
   //  }; 
     
     $scope.deleteData = function(id) {
-        // $http.delete('api/todos/' + id)
-        // .success(function(data) {
-        //     $scope.fdatas = data;
-        //     console.log(fdatas);
-        // })
-        // .error(function(data) {
-        //     console.log('Error: ' + data);
-        // });
+
         $http({
             method: 'Delete',
             url: 'api/todos/'+id
@@ -101,36 +94,6 @@ app.controller('tableController', function($scope, $http, sharedvalues) {
         location.href='#!admin_update';
         console.log("my",tbldata);
         sharedvalues.setProperty(tbldata);
-        //console.log(tbldata);
-              
-    //        }
-
-  
-        
-
-
- 
-    
-
-        //  $http.put('/api/admin_form/' + id,
-        //   {
-        //        stripcode: tbldata.stripcode,
-        //        stripname: tbldata.stripname,
-        //        currentrate: tbldata.currentrate,
-        //        stockloss: tbldata.stockloss,
-        //        target:tbldata.target
-
-        //  })
-        //     .success(function(tbldata) {
-        //         console.log(tbldata);
-        //        location.reload(); 
-        //         $scope.save = true;
-    
-        //     })
-        //     .error(function() {
-        //         console.log('Error: ');
-        //     });
-        
     }
 });
 
