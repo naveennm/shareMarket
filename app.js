@@ -23,7 +23,7 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
-mongoose.connect('mongodb://localhost:34519/test1234');
+mongoose.connect('mongodb://localhost:41658/test1234');
 var Todo = mongoose.model('stockdb', {
     stripcode: Number,
     stripname: String,
@@ -176,4 +176,4 @@ app.post('/api/login', function (req, res) {
     res.sendfile('main.html');
   });
 
-app.listen(8080);
+app.listen(80);
