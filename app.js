@@ -45,9 +45,7 @@ extended: false
 }))
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/views', express.static(__dirname + '/views'));
-// app.get('/', function (req, res) {
-//    res.sendFile(__dirname + '/views/index.html');
-// })
+
 
 app.get('/', function(req, res) {
     res.sendfile('main.html'); // load the single view file (angular will handle the page changes on the front-end)
