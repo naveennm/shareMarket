@@ -82,10 +82,11 @@ app.controller('tableController', function($scope, $http, sharedvalues) {
             url: 'api/todos/'+id
           }).then(function successCallback(response) {
               $scope.data = response.data;
-              console.log('-------', $scope.data.data);
+              $("#deleteMsg").text("Delete Successfully");
               // this callback will be called asynchronously
               // when the response is available
             }, function errorCallback(response) {
+                $("#deleteMsg").text("Error");
               // called asynchronously if an error occurs
               // or server returns response with an error status.
             });
@@ -129,7 +130,7 @@ app.controller('tableControllers', function($scope, $http,sharedvalues) {
           }
         }
         
-       $http(req).then(function(){console.log("success")}, function(){console.log("no")});
+       $http(req).then(function(){$("#updateMsg").text("Update Successful");}, function(){$("#updateMsg").text("Error");});
     }
 });
 
