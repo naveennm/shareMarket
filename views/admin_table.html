@@ -1,0 +1,28 @@
+<div class="col-md-12" ng-controller="tableController">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Strip Code</th>
+            <th>Strip Name</th>
+            <th>Current Rate</th>
+            <th>Stock Loss</th>
+            <th>Target</th>
+          </tr>
+        </thead>
+        <!-- ng-repeat="tbldata in fdatas" -->
+        <tbody>
+            
+          <tr  ng-repeat="tbldata in data">
+            <th><button type="submit" class="btn btn-primary" style="margin-left:20px;" ng-click="deleteData(tbldata._id)">Delete</button>
+            <button type="submit" class="btn btn-primary" style="margin-left:20px;"  ng-click="editData(tbldata)">Edit</button>
+            </th>
+            <td>{{ tbldata.stripcode }}</td>
+            <td>{{tbldata.stripname}}</td>
+            <td>{{tbldata.currentrate}}</td>
+            <td>{{tbldata.stockloss}}</td>
+            <td>{{tbldata.target}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,40 @@
+<div class="col-md-12" ng-controller="tableControllers">
+        <form class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="text">Strip Code:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control " ng-model="stripcodes"  placeholder="Enter stripcode">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2" for="pwd">Strip Name</label>
+              <div class="col-sm-6"> 
+                <input type="text" class="form-control" id="pwd" ng-model="stripname" placeholder="Enter Strip Name">
+              </div>
+            </div>
+            <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Current Rate:</label>
+                    <div class="col-sm-6"> 
+                      <input type="text" class="form-control" id="pwd" ng-model="currentrate" placeholder="Enter Current Rate">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Stock Loss:</label>
+                        <div class="col-sm-6"> 
+                          <input type="text" class="form-control" id="pwd" ng-model="stockloss" placeholder="Enter Stock Loss">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Target:</label>
+                            <div class="col-sm-6"> 
+                              <input type="text" class="form-control" id="pwd" ng-model="target"  placeholder="Enter Target">
+                            </div>
+                          </div>
+            <div class="form-group"> 
+              <div class="col-sm-offset-2 col-sm-6">
+                <button type="submit" class="btn btn-default" ng-click="update(tbldata)">Submit</button>
+                <button type="submit" class="btn btn-primary" style="margin-left:20px;" onclick="location.href='#!admin_table';">Back</button>
+              </div>
+            </div>
+          </form>
+</div>
